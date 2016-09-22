@@ -1,0 +1,27 @@
+<div>{{vm.message}}</div>
+<div>{{vm.test}}</div>
+<div>{{vm.sumar(2, 3)}}</div>
+<div>
+    <ul>
+        <li ng-repeat="item in vm.items">
+        {{item.nombre}}
+        </li>
+    </ul>
+</div>
+
+<div>
+<table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Id</th> 
+  </tr>
+  <tr ng-repeat="item in vm.items">
+    <td>{{item.nombre}}</td>
+    <td>{{item.id}}</td>
+  </tr>
+</table>
+</div>
+
+<div>
+  {{vm.sayHello('Juan')}}
+</div>
