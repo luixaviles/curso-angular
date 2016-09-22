@@ -25,3 +25,14 @@
 <div>
   {{vm.sayHello('Juan')}}
 </div>
+
+<div>
+  <input type="text" ng-model="vm.message1">
+  <p>Mensaje: {{vm.message1}} </p>
+  <a href="" ng-click="vm.showMessage();vm.message1='test'">
+    Mostrar Mensaje
+  </a>
+  <button ng-click="vm.showMessage()">
+  Click me!
+  </button>
+</div>
