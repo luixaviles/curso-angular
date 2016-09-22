@@ -24,6 +24,13 @@ angular.module('uiApp')
 
     controller.sayHello = function(name) {
       return UserService.sayHello(name);
-    } 
+    };
+
+    controller.showMessage = function() {
+      console.log('Ejecutando showMessage');
+      alert('Bienvenidos');
+    };
+
+    // controller.message1 = 'Angular';
 
   });
