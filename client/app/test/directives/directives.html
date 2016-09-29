@@ -1,0 +1,46 @@
+<input type="text" ng-model="vm.message">
+<div class="alert" 
+     ng-class="{'alert-info':vm.message === 'info',
+               'alert-danger':vm.message === 'danger',
+               'alert-success': vm.message === 'success',
+               'my-style': vm.message == 'test'}">
+{{vm.message}}    
+</div>
+
+<div>Message: {{vm.message}}</div>
+
+<a ng-href="{{vm.message}}">
+    Click Me!
+</a>
+<br>
+<a ui-sref="main" ng-if="vm.show">
+    Go Home Page
+</a>
+<img ng-src="{{vm.message}}">
+
+<div>
+    <a href="" ng-click="vm.showMenu()">
+        Show Menu: {{vm.show}}
+    </a>
+    <ul ng-show="vm.show">
+       <li>1</li>
+       <li>2</li>
+       <li>3</li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
