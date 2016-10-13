@@ -14,12 +14,16 @@
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
       <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
       <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="app/main/list/angular/angular.css">
+      <link rel="stylesheet" href="app/main/list/java/java.css">
+      <link rel="stylesheet" href="app/main/list/list.css">
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="app/myInput/myInput.css">
       <link rel="stylesheet" href="app/test/directives/directives.css">
@@ -64,20 +68,27 @@
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/ng-table/dist/ng-table.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js(.tmp) app/app.js -->
       <script src="app/app.js"></script>
       <!-- injector:js -->
       <script src="components/util/util.module.js"></script>
-      <script src="app/test/test.js"></script>
+      <script src="app/test/directives/directives.controller.js"></script>
+      <script src="app/main/list/angular/angular.js"></script>
+      <script src="app/main/list/java/java.controller.js"></script>
+      <script src="app/main/list/java/java.js"></script>
+      <script src="app/main/list/list.controller.js"></script>
+      <script src="app/main/list/list.js"></script>
+      <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
       <script src="app/my-filter/my-filter.filter.js"></script>
       <script src="app/myInput/myInput.directive.js"></script>
-      <script src="app/test/directives/directives.controller.js"></script>
+      <script src="app/main/list/angular/angular.controller.js"></script>
       <script src="app/test/directives/directives.js"></script>
       <script src="app/test/test.controller.js"></script>
-      <script src="app/main/main.controller.js"></script>
+      <script src="app/test/test.js"></script>
       <script src="app/user/user.service.js"></script>
       <script src="components/footer/footer.directive.js"></script>
       <script src="components/modal/modal.service.js"></script>
