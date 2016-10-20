@@ -3,10 +3,12 @@
 angular.module('uiApp', [
   'uiApp.constants',
   'ngCookies',
+  'ngLodash',
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngTable'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

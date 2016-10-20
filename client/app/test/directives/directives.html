@@ -29,17 +29,54 @@
     </ul>
 </div>
 
+<!--<div ng-switch="vm.user.access">-->
+    <!--Not a good practice!!-->
+<!--<div ng-switch="vm.getAccess()">    -->
+<div ng-switch="vm.message">
+    <div ng-switch-when="admin">
+        I'm an Admin!
+    </div>
+    <div ng-switch-when="user">
+        I'm an User
+    </div>
+    <div ng-switch-when="author">
+        I'm an Author
+    </div>
+    <div ng-switch-default>
+        Default code
+    </div>
+</div>
 
+<div>
+    <p>{{vm.message}}</p>
+    <p ng-bind="vm.message"></p>
+</div>
 
+<my-input></my-input>
+<div my-input=""></div>
+<div class="my-input"></div>
 
+<p>Today's date: {{vm.timeNow}}</p>
+<p>Today's date: {{vm.timeNow| date:'dd-MM-yyyy'}}</p>
 
+<p>{{vm.myObject | json}}</p>
 
+<input type="number" ng-model="vm.price"/>
+<p>Price in $: {{vm.price | currency}}</p>
+<p>Price in Bs: {{vm.price | currency:'Bs.'}}</p>
+<p>Price in Bs: {{vm.price | currency:'Bs.':0}}</p>
 
+<div>
+    {{vm.message | myFilter:'M'}}
+</div>
 
+<div>
+    Filtered: {{vm.filtered}}
+</div>
 
-
-
-
+<div>
+  BOT: {{vm.dateFiltered}}
+</div>
 
 
 
