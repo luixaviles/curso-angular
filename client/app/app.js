@@ -3,6 +3,7 @@
 angular.module('uiApp', [
   'uiApp.constants',
   'ngCookies',
+  'ngLodash',
   'ngResource',
   'ngSanitize',
   'ui.router',
