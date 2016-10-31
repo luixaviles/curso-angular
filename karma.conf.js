@@ -22,6 +22,9 @@ module.exports = function(config) {
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
       'client/bower_components/ng-table/dist/ng-table.js',
       'client/bower_components/ng-lodash/build/ng-lodash.js',
+      'client/bower_components/angular-translate/angular-translate.js',
+      'client/bower_components/angular-dialog-service/dist/dialogs.js',
+      'client/bower_components/angular-dialog-service/dist/dialogs-default-translations.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'client/app/app.js',

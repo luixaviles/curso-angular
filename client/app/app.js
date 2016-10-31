@@ -8,7 +8,8 @@ angular.module('uiApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ngTable'
+  'ngTable',
+  'dialogs.main'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
