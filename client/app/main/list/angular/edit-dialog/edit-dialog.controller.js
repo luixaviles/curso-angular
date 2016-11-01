@@ -16,7 +16,11 @@
     activate();
 
     function activate() {
-      console.log('received', data);
+      // console.log('received', data);
+    }
+
+    function openDateSelector() {
+
     }
 
     function saveChanges() {

@@ -2,9 +2,10 @@
 
 angular.module('uiApp')
     .controller('AngularCtrl', 
-    function (NgTableParams, Course, lodash) {
+    function (NgTableParams, Course, lodash, dialogs) {
         var vm = this;
         vm.getAge = getAge;
+        vm.edit = edit;
 
         activate();
 
@@ -29,6 +30,19 @@ angular.module('uiApp')
 
         function getAge(birthDate){
             return '25';
+        }
+
+        function edit(student){
+            var options = {
+                size: 'lg',
+                animation:true
+            };
+            var dialog = dialogs.create(
+                'app/main/list/angular/edit-dialog/edit-dialog.html',
+                'AngularEditController',
+                student,
+                options,
+                'vmAngularEdit');
         }
 
     });
