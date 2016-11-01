@@ -30,15 +30,17 @@
     }
 
     function saveChanges() {
-      vm.selected.birthDate = $moment(data.birthDateObject).format('DD-MM-YYYY');
-      Course.update(
+      vm.selected.birthDate = 
+      $moment(data.birthDateObject).format('DD-MM-YYYY');
+      vm.promise = Course.update(
         vm.selected,
         {
           id: 'angular',
           student: data.id
         }
-        ).then(function(response){
-            $uibModalInstance.close();
+        );
+        vm.promise.then(function(response){
+            $uibModalInstance.close(response);
         });
     }
   }
