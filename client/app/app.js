@@ -8,7 +8,10 @@ angular.module('uiApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ngTable'
+  'ngTable',
+  'dialogs.main',
+  'angular-momentjs',
+  'cgBusy'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

@@ -11,7 +11,11 @@
 			{{vmAngular.getAge(user.birthDate)}}
     </td>-->
 		<td title="'Operations'">
-			<button>Edit</button>
+			<button 
+			ng-click="vmAngular.edit(user)">Edit</button>
+			<button 
+			ng-click="vmAngular.delete(user)">Delete</button>
+			
 		</td>
 	</tr>
 </table>

@@ -1,4 +1,4 @@
-<div class="edit-content">
+<div class="edit-content" cg-busy="vmAngularEdit.promise">
   <form name="formEdit" class="form-horizontal">
     <div class="form-group">
       <label class="col-sm-2 control-label">Name</label>
@@ -16,7 +16,11 @@
         <p class="input-group">
           <input name="date"
                  type="text"
-                 class="form-control"/>
+                 class="form-control"
+                 ng-model="vmAngularEdit.selected.birthDateObject"
+                 uib-datepicker-popup="{{vmAngularEdit.dateFormat}}"
+                 datepicker-options="vmAngularEdit.dateOptions"
+                 is-open="vmAngularEdit.isDateOpened"/>
           <span class="input-group-btn">
                 <button type="button" class="btn btn-default"
                         ng-click="vmAngularEdit.openDateSelector()">
