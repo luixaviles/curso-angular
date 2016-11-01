@@ -17,8 +17,8 @@
           <input name="date"
                  type="text"
                  class="form-control"
-                 ng-model="vmAngularEdit.selected.birthDate"
-                 uib-datepicker-popup
+                 ng-model="vmAngularEdit.selected.birthDateObject"
+                 uib-datepicker-popup="{{vmAngularEdit.dateFormat}}"
                  datepicker-options="vmAngularEdit.dateOptions"
                  is-open="vmAngularEdit.isDateOpened"/>
           <span class="input-group-btn">
