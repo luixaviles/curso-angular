@@ -10,7 +10,8 @@ angular.module('uiApp', [
   'ui.bootstrap',
   'ngTable',
   'dialogs.main',
-  'angular-momentjs'
+  'angular-momentjs',
+  'cgBusy'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

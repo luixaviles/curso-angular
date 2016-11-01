@@ -43,6 +43,9 @@ angular.module('uiApp')
                 student,
                 options,
                 'vmAngularEdit');
+            dialog.result.then(function(s){
+                activate();
+            });
         }
 
     });

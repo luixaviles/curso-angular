@@ -16,7 +16,8 @@
     "ng-table": "1.0.0",
     "ng-lodash": "^0.5.0",
     "angular-dialog-service": "^5.3.0",
-    "angular-momentjs": "^0.2.2"
+    "angular-momentjs": "^0.2.2",
+    "angular-busy-plus": "^4.1.5"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"
