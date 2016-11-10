@@ -1,0 +1,12 @@
+.edit-content {
+    padding-left: 100px;
+    padding-top: 70px;
+    padding-bottom: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal-close-btn {
+    position: relative;
+    top: -26px;
+}
