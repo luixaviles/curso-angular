@@ -1,22 +1,50 @@
 <div class="modal-header">
-  <h4>Editar Estudiante</h4>
+  <h4>Editar Estudiante 
+    <i class="fa fa-question-circle fa-lg" uib-tooltip="Permite editar la informacion del estudiante"></i>
+  </h4>
   <button class="close modal-close-btn" type="button" 
   ng-click="vmAngularEdit.close()">
     <i class="fa fa-times fa-lg"></i>
   </button>
 </div>
 <div class="edit-content" cg-busy="vmAngularEdit.promise">
-  <form name="formEdit" class="form-horizontal">
-    <div class="form-group">
+  <form name="formEdit" class="form-horizontal" novalidate>
+    <div class="form-group" 
+    ng-class="{'has-error': formEdit.name.$invalid && formEdit.name.$dirty }">
       <label class="col-sm-2 control-label">Name</label>
       <div class="col-sm-4">
-        <input name="nombre"
+        <input name="name"
                type="text"
                class="form-control"
-               ng-model="vmAngularEdit.selected.name">
+               ng-model="vmAngularEdit.selected.name"
+               ng-minlength="3"
+               ng-maxlength="30" 
+               ng-required="true"
+               ng-pattern="/^[a-zA-Z\- ]*$/">
+          <span class="help-block" 
+               ng-if="formEdit.name.$error.pattern && formEdit.name.$dirty">
+           Only characters allowed
+          </span>
+         <span class="help-block" 
+               ng-if="
+               formEdit.name.$invalid && 
+               formEdit.name.$dirty && 
+               !formEdit.name.$error.minlength &&
+               !formEdit.name.$error.maxlength">
+           Required
+         </span>
+         <span class="help-block" 
+               ng-if="formEdit.name.$error.minlength && formEdit.name.$dirty">
+           Name is short
+         </span>
+         <span class="help-block" 
+               ng-if="formEdit.name.$error.maxlength && formEdit.name.$dirty">
+           Name is large
+         </span>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group" 
+    ng-class="{'has-error': formEdit.date.$invalid && formEdit.date.$dirty }">
       <label class="col-sm-2 control-label">Birth Date</label>
 
       <div class="col-sm-4">
@@ -27,19 +55,25 @@
                  ng-model="vmAngularEdit.selected.birthDateObject"
                  uib-datepicker-popup="{{vmAngularEdit.dateFormat}}"
                  datepicker-options="vmAngularEdit.dateOptions"
-                 is-open="vmAngularEdit.isDateOpened"/>
+                 is-open="vmAngularEdit.isDateOpened"
+                 ng-required="true"/>
           <span class="input-group-btn">
                 <button type="button" class="btn btn-default"
                         ng-click="vmAngularEdit.openDateSelector()">
                   <i class="glyphicon glyphicon-calendar"></i></button>
-              </span>
+              </span>              
         </p>
+        <span class="help-block" 
+               ng-if="formEdit.date.$invalid && 
+               formEdit.date.$dirty">
+           Required
+         </span>
       </div>
     </div>
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button ng-click="vmAngularEdit.saveChanges()" class="btn btn-primary">
+        <button ng-disabled="formEdit.$invalid" ng-click="vmAngularEdit.saveChanges()" class="btn btn-primary">
           Save
         </button>
       </div>
