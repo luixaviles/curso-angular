@@ -16,6 +16,7 @@
       maxDate: new Date()
     };
     vm.dateFormat = 'dd-MM-yyyy';
+    vm.close = close;
 
     activate();
 
@@ -23,6 +24,10 @@
       data.birthDateObject = $moment(data.birthDate, 'DD-MM-YYYY').toDate();
       console.log('received', data);
       vm.selected = data;
+    }
+
+    function close() {
+      $uibModalInstance.close();
     }
 
     function openDateSelector() {
