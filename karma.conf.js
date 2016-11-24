@@ -62,7 +62,17 @@ module.exports = function(config) {
     },
 
     // list of files / patterns to exclude
-    exclude: [],
+    exclude: [
+      'client/app/main/list/angular/*.spec.js',
+      'client/app/main/list/angular/edit-dialog/*.spec.js',
+      'client/app/main/list/java/*.spec.js',
+      'client/app/main/list/*.spec.js',
+      'client/app/my-filter/*.spec.js',
+      'client/app/myInput/*.spec.js',
+      'client/app/services/**/*.spec.js',
+      'client/app/test/*.spec.js',
+      'client/app/user/*.spec.js'
+    ],
 
     // web server port
     port: 8080,
