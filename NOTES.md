@@ -22,3 +22,26 @@ bower install angular-momentjs --save
 ```
 bower install angular-busy-plus --save
 ```
+
+# Run E2E tests
+```
+npm run update-webdriver
+```
+
+Review latest version of Chrome driver: [https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+
+```
+grunt test:e2e
+```
+
+Update `package.json`
+
+```
+"grunt-protractor-runner": "^4.0.0"
+```
+
+```
+npm update
+npm run update-webdriver
+grunt test:e2e
+```
