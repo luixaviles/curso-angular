@@ -694,15 +694,6 @@ module.exports = function (grunt) {
 
       else {
         return grunt.task.run([
-          'clean:server',
-          'env:all',
-          'env:test',
-          'concurrent:pre',
-          'concurrent:test',
-          'injector',
-          'wiredep:client',
-          'postcss',
-          'express:dev',
           'protractor'
         ]);
       }
